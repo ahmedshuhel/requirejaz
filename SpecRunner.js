@@ -20,7 +20,7 @@
 		}		  
 	});
 
-	require(['jquery', 'jasmine-html'], function($, jasmine){
+	require(['jquery', 'jasmine-html', 'specs'], function($, jasmine, specs){
 
 		var jasmineEnv = jasmine.getEnv();
 		jasmineEnv.updateInterval = 1000;
@@ -33,12 +33,10 @@
 			return htmlReporter.specFilter(spec);
 		};
 
-		var specs = [];
 
-		specs.push('spec/addition.spec');
 
 		$(function(){
-			require(specs, function(){
+			require(specs.all, function(){
 				jasmineEnv.execute();
 			});
 		});
