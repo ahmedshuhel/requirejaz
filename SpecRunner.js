@@ -3,13 +3,13 @@
 		urlArgs: "bust=" + (new Date()).getTime(),
 		baseUrl: './',
 		paths: {
-			'jquery'  :  'lib/jquery-1.10.2/jquery-1.10.2.js',
-			'jasmine' :  'lib/jasmine-1.3.1/jasmine.js',
-			'jasmine-html' : 'lib/jasmine-1.3.1/jasmine-html.js',
+			jquery  :  'lib/jquery-1.10.2/jquery-1.10.2',
+			jasmine :  'lib/jasmine-1.3.1/jasmine',
+			'jasmine-html' : 'lib/jasmine-1.3.1/jasmine-html',
 		},
 
 		shim: {    
-			'jasmine' : {
+			jasmine : {
 				    exports: 'jasmine'
 			},		
 			   
@@ -17,8 +17,7 @@
 				    deps: ['jasmine'],
 				    exports: 'jasmine'
 			}
-		}
-		  
+		}		  
 	});
 
 	require(['jquery', 'jasmine-html'], function($, jasmine){
